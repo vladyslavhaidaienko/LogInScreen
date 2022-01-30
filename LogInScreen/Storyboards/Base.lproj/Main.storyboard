@@ -45,7 +45,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbj-No-5ap"/>
-                                    <segue destination="zlG-bE-C2j" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="YlF-Dp-GGB"/>
+                                    <segue destination="D9W-d6-NMf" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="YlF-Dp-GGB"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="OZ1-hE-svs">
@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="71.651785714285708"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Home-->
         <scene sceneID="wiK-UF-eWQ">
             <objects>
                 <viewController id="zlG-bE-C2j" customClass="WelcomeViewController" customModule="LogInScreen" customModuleProvider="target" sceneMemberID="viewController">
@@ -124,7 +124,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbN-c5-iAP">
-                                <rect key="frame" x="153.5" y="580" width="107" height="43"/>
+                                <rect key="frame" x="153.5" y="531" width="107" height="43"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
@@ -146,6 +146,7 @@
                             <constraint firstItem="dbN-c5-iAP" firstAttribute="centerX" secondItem="jPX-2o-qHu" secondAttribute="centerX" id="xi4-XY-ExG"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="AwL-90-4fQ"/>
                     <navigationItem key="navigationItem" id="Hk3-Mb-blk"/>
                     <connections>
                         <outlet property="userLabel" destination="0d5-Rf-n0D" id="N3O-6t-42b"/>
@@ -154,10 +155,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivK-Py-yka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="pNa-1U-gH9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="796" y="72"/>
+            <point key="canvasLocation" x="1561" y="72"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6NG-RU-rVl">
+            <objects>
+                <viewController id="zj7-My-gtY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yb2-rD-nuH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1Ta-HV-bEh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lnL-pd-SDb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pFM-Yw-kJm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3132" y="72"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Q5k-h6-T5j">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="D9W-d6-NMf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Pl-Vu-FOF">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="zlG-bE-C2j" kind="relationship" relationship="viewControllers" id="cc4-o3-Lfz"/>
+                        <segue destination="f6w-sy-U9R" kind="relationship" relationship="viewControllers" id="OQV-l0-PyV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rrG-EJ-ApB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="795.6521739130435" y="71.651785714285708"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="DCD-xw-KKp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f6w-sy-U9R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" image="info.circle" catalog="system" id="smt-Et-csv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VUo-IS-Ced">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zj7-My-gtY" kind="relationship" relationship="rootViewController" id="9UQ-bw-lSj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Kj-iP-wYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2369.5652173913045" y="71.651785714285708"/>
         </scene>
     </scenes>
     <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

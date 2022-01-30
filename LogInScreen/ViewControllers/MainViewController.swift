@@ -15,7 +15,10 @@ class MainViewController: UIViewController {
     private let user = "User"
     private let password = "Password"
     
+    private let person = User.getUser()
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBarController = segue.destination as! UITabBarController
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userName = user
     }
