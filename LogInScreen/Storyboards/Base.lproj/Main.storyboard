@@ -109,7 +109,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="nRc-ps-3UV">
                                 <rect key="frame" x="100" y="204" width="214" height="36"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d5-Rf-n0D">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d5-Rf-n0D">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
@@ -155,19 +155,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivK-Py-yka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="pNa-1U-gH9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="72"/>
+            <point key="canvasLocation" x="1562" y="72"/>
         </scene>
-        <!--View Controller-->
+        <!--AAA-->
         <scene sceneID="6NG-RU-rVl">
             <objects>
-                <viewController id="zj7-My-gtY" sceneMemberID="viewController">
+                <viewController id="zj7-My-gtY" customClass="InfoViewController" customModule="LogInScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yb2-rD-nuH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKl-zx-fys">
+                                <rect key="frame" x="30" y="432.5" width="354" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1Ta-HV-bEh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Ta-HV-bEh" firstAttribute="trailing" secondItem="QKl-zx-fys" secondAttribute="trailing" constant="30" id="6pM-AP-NRh"/>
+                            <constraint firstItem="QKl-zx-fys" firstAttribute="centerY" secondItem="Yb2-rD-nuH" secondAttribute="centerY" id="b57-Wu-ZXw"/>
+                            <constraint firstItem="QKl-zx-fys" firstAttribute="leading" secondItem="1Ta-HV-bEh" secondAttribute="leading" constant="30" id="jT0-r2-rIp"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lnL-pd-SDb"/>
+                    <navigationItem key="navigationItem" title="AAA" largeTitleDisplayMode="always" id="lnL-pd-SDb"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="QKl-zx-fys" id="KMD-DL-SGN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFM-Yw-kJm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,8 +213,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f6w-sy-U9R" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="More" image="info.circle" catalog="system" id="smt-Et-csv"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VUo-IS-Ced">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="VUo-IS-Ced">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
