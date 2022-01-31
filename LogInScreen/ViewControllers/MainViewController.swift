@@ -22,8 +22,8 @@ class MainViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
-                let infoVC = navigationVC.topViewController as? InfoViewController
-                infoVC?.user = user
+                guard let infoVC = navigationVC.topViewController as? InfoViewController else { return }
+                infoVC.user = user
             }
         }
     }
